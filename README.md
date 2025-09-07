@@ -204,8 +204,8 @@ backup_YYYYMMDD_HHMMSS.dat - Manual backups
 
 ```mermaid
 graph TB
-    A[CLI Interface] --> B[EmployeeHashTable]
-    A --> C[DataManager]
+    A[CLI Interface] --> B[Employee Hash Table]
+    A --> C[Data Manager]
     A --> D[Logger]
     B --> E[Hash Nodes]
     C --> F[File I/O]
@@ -226,7 +226,6 @@ graph TB
     G
     end
 ```
-
 ### Design Patterns Used
 - **RAII (Resource Acquisition Is Initialization)**: Automatic resource management
 - **Factory Pattern**: Employee creation and validation
