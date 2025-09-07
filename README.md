@@ -204,12 +204,12 @@ backup_YYYYMMDD_HHMMSS.dat - Manual backups
 
 ```mermaid
 graph TB
-    A[CLI Interface] --> B[Employee Hash Table]
-    A --> C[Data Manager]
-    A --> D[Logger]
-    B --> E[Hash Nodes]
-    C --> F[File I/O]
-    D --> G[Log Files]
+    A["CLI<br/>Interface"] --> B["Employee<br/>Hash Table"]
+    A --> C["Data<br/>Manager"]
+    A --> D["Logger"]
+    B --> E["Hash<br/>Nodes"]
+    C --> F["File<br/>I/O"]
+    D --> G["Log<br/>Files"]
     
     subgraph "Data Layer"
     B
@@ -226,7 +226,7 @@ graph TB
     G
     end
 
-    %% Force box sizes & prevent clipping
+    %% Force node widths so no text is clipped
     style A width:160px, font-size:14px
     style B width:180px, font-size:14px
     style C width:160px, font-size:14px
