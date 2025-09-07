@@ -198,44 +198,20 @@ employee_system.log     - Comprehensive logging
 backup_YYYYMMDD_HHMMSS.dat - Manual backups
 ```
 
-## 🔍 System Architecture
+⚙️ System Architecture
+1. Command Line Interface (CLI)
+Central entry point for all user operations.
+Routes requests to appropriate modules.
+2. Data Layer
+Employee Hash Table: Efficient employee storage & retrieval.
+Hash Nodes: Store employee records with chaining to handle collisions.
+3. Persistence Layer
+Data Manager: Handles interaction between in-memory data and storage.
+File I/O: Ensures reliable persistence of employee records.
+4. Monitoring Layer
+Logger: Tracks operations for debugging & audits.
+Log Files: Maintains historical records for accountability.
 
-### Core Components
-
-```mermaid
-graph TB
-    A["CLI<br/>Interface"] --> B["Employee<br/>Hash Table"]
-    A --> C["Data<br/>Manager"]
-    A --> D["Logger"]
-    B --> E["Hash<br/>Nodes"]
-    C --> F["File<br/>I/O"]
-    D --> G["Log<br/>Files"]
-    
-    subgraph "Data Layer"
-    B
-    E
-    end
-    
-    subgraph "Persistence Layer"
-    C
-    F
-    end
-    
-    subgraph "Monitoring Layer"
-    D
-    G
-    end
-
-    %% Force node widths so no text is clipped
-    style A width:160px, font-size:14px
-    style B width:180px, font-size:14px
-    style C width:160px, font-size:14px
-    style D width:140px, font-size:14px
-    style E width:140px, font-size:14px
-    style F width:140px, font-size:14px
-    style G width:140px, font-size:14px
-
-```
 ### Design Patterns Used
 - **RAII (Resource Acquisition Is Initialization)**: Automatic resource management
 - **Factory Pattern**: Employee creation and validation
