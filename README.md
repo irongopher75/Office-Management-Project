@@ -225,6 +225,16 @@ graph TB
     D
     G
     end
+
+    %% Force box sizes & prevent clipping
+    style A width:160px, font-size:14px
+    style B width:180px, font-size:14px
+    style C width:160px, font-size:14px
+    style D width:140px, font-size:14px
+    style E width:140px, font-size:14px
+    style F width:140px, font-size:14px
+    style G width:140px, font-size:14px
+
 ```
 ### Design Patterns Used
 - **RAII (Resource Acquisition Is Initialization)**: Automatic resource management
